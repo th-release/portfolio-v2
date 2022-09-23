@@ -19,7 +19,7 @@ const Home: NextPage = () => {
         <h1>더 가다듬고<br/><strong>더 좋은 사람으로</strong></h1>
         <div className='skill-box'>
           <div>
-            <h2>저는 <strong>"백앤드 개발자"</strong>입니다.</h2>
+            <h2>저는 <strong>&quot;백앤드 개발자&quot;</strong>입니다.</h2>
             <div>
               <p>
                 # Node.js
@@ -56,7 +56,7 @@ const Home: NextPage = () => {
       <footer className='fourth'>
       <div className='footer-box'>
         <div>
-          <h2>저는 <strong>"백앤드 개발자 최태혁"</strong>입니다.<br/><p style={{ fontSize: "15px" }}><br/>th.release.cth@gmail.com<br/><br/><a href='https://github.com/th-release/' style={{ color: "#0070f3" }}>th-release's github</a></p></h2>
+          <h2>저는 <strong>&ldquo;백앤드 개발자 최태혁&ldquo;</strong>입니다.<br/><p style={{ fontSize: "15px" }}><br/>th.release.cth@gmail.com<br/><br/><a href='https://github.com/th-release/' style={{ color: "#0070f3" }}>th-release$#39;s github</a></p></h2>
           <div>
           </div>
           </div>
