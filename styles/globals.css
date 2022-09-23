@@ -1,13 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Noto Serif KR', serif;
+  font-weight: 100;
 }
 
 a {
-  color: inherit;
   text-decoration: none;
 }
 
@@ -15,12 +16,59 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+  margin: 0;
+  padding: 0;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+body {
+  background-color: #121212;
+  color: #fafafa;
+}
+
+.main > * {
+  scroll-snap-align: start;
+}
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  z-index: 1;
+  margin-left: 3px;
+}
+
+.first {
+  animation: fadeIn .8s forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  background-color: #212121;
+  width: 100%;
+  height: 100vh;
+}
+
+.first > h1 {
+  font-size: 30px;
+  word-break: keep-all;
+  text-align: center;
+}
+
+.second {
+  background-image: url(/);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-  body {
-    color: white;
-    background: black;
+
+  to {
+    opacity: 1;
   }
 }
