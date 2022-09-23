@@ -6,10 +6,13 @@ body {
   margin: 0;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 100;
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
 }
 
 a {
   text-decoration: none;
+  color: #fafafa;
 }
 
 * {
@@ -23,14 +26,22 @@ h1, h2, h3, h4, h5, h6, p, ul, ol {
   font-size: inherit;
 }
 
+strong {
+  font-weight: 900;
+}
+
 body {
   background-color: #121212;
   color: #fafafa;
 }
 
-.main > * {
-  scroll-snap-type: start;
-  scroll-snap-stop: normal;
+.main {
+  animation: fadeIn .8s forwards;
+}
+
+.main > article, .main > footer {
+  scroll-snap-type: y mandatory;
+  scroll-snap-align: start;
 }
 
 .LeftSidebar {
@@ -52,7 +63,6 @@ body {
 }
 
 .first {
-  animation: fadeIn .8s forwards;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,10 +80,14 @@ body {
 }
 
 .second {
-  background-image: url(/code.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 50%;
+  background-color: #212121;
+  height: 100%;
+}
+
+.second > h1 {
+  font-size: 30px;
+  word-break: keep-all;
+  text-align: center;
 }
 
 .leftTop {
@@ -91,6 +105,127 @@ body {
   margin-bottom: 10px;
 }
 
+.skill-box {
+  padding: 20px 30px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 90px);
+}
+
+.skill-box h2 {
+  background-image: url(/backend.png);
+  text-align: center;
+  padding: 120px 80px 120px 80px;
+  font-size: 20px;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.skill-box > div {
+  text-align: center;
+  display: inline-flex;
+  background-color: #121212;
+  padding: 0;
+  border-radius: 0.175rem;
+}
+
+.skill-box > div > div {
+  padding: 90px;
+  margin: auto;
+}
+
+.third {
+  background-color: #212121;
+  height: 100%;
+}
+
+.third > h1 {
+  font-size: 30px;
+  word-break: keep-all;
+  text-align: center;
+}
+
+.challenge-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 90px);
+}
+
+.challenge-box > .sort {
+  padding: 0 30px 20px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 80rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.sort > div {
+  text-align: center;
+  background-color: #121212;
+  width: 100%;
+  max-width: 300px;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 2px 2px 2px 1px #0003;
+}
+
+.sort h2 {
+  text-align: center;
+  padding: 100px 0 30px;
+  font-size: 20px;
+  background-color: #12121288;
+  transition: background-color .4s ease-in-out;
+}
+
+.sort h2:hover {
+  background-color: #21212144;
+}
+
+.fourth {
+  background-color: #212121;
+  height: 100%;
+}
+
+.footer-box {
+  padding: 20px 30px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-box h2 {
+  background-color: #121212;
+  text-align: center;
+  padding: 120px;
+  font-size: 20px;
+}
+
+.footer-box > div {
+  text-align: center;
+  display: inline-flex;
+  background-color: #121212;
+  padding: 0;
+  border-radius: 0.175rem;
+}
+
+.footer-box > div > div {
+  padding: 90px;
+  margin: auto;
+  background-image: url(/profile2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-color: #121212;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -98,5 +233,52 @@ body {
 
   to {
     opacity: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .skill-box > div {
+    text-align: center;
+    background-color: #212121;
+    padding-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 2px 2px 2px 1px #0003;
+    display: block;
+  }
+
+  .skill-box > div > h2 {
+    text-align: center;
+    padding: 60px 0;
+    margin: 0 0 20px;
+    font-size: 20px;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .skill-box > div > div {
+    padding: 0;
+  }
+
+  .footer-box {
+    width: 100%;
+    padding: 0;
+  }
+
+  .footer-box > div {
+    width: 100%;
+  }
+
+  .footer-box h2 {
+    background-color: #121212;
+    text-align: center;
+    font-size: 20px;
+    margin: auto;
+    padding: 120px 0px;
+  }
+
+  .footer-box > div > div {
+    display: none;
   }
 }
