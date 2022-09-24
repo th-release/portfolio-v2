@@ -56,7 +56,7 @@ const Home: NextPage = () => {
       <footer className='fourth'>
       <div className='footer-box'>
         <div>
-          <h2>저는 <strong>&ldquo;백앤드 개발자 최태혁&ldquo;</strong>입니다.<br/><p style={{ fontSize: "15px" }}><br/>th.release.cth@gmail.com<br/><br/><a href='https://github.com/th-release/' style={{ color: "#0070f3" }}>th-release$#39;s github</a></p></h2>
+          <h2>저는 <strong>&#34;백앤드 개발자 최태혁&#34;</strong>입니다.<br/><p style={{ fontSize: "15px" }}><br/>th.release.cth@gmail.com<br/><br/><a href='https://github.com/th-release/' style={{ color: "#0070f3" }}>th-release&#39;s github</a></p></h2>
           <div>
           </div>
           </div>
